@@ -24,6 +24,8 @@ RUN pip install --no-cache-dir -r requirement.txt
 # Copy the rest of your application code into the container
 COPY . /app/
 
+RUN python manage.py migrate
+
 # Expose the port the app runs on
 EXPOSE 8000
 
