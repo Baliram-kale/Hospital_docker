@@ -24,11 +24,9 @@ RUN pip install --no-cache-dir -r requirement.txt
 # Copy the rest of your application code into the container
 COPY . /app/
 
-RUN python manage.py migrate
-
 # Expose the port the app runs on
 EXPOSE 8000
 
 # Command to run the application
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
-
+#CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
