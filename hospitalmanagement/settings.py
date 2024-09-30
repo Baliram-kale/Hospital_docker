@@ -79,15 +79,15 @@ WSGI_APPLICATION = 'hospitalmanagement.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'demo',  # Your database name
-        # 'USER': 'admin',      # Your database username
-        # 'PASSWORD': 'rootpassword',  # Your database password
-        # 'HOST': 'database.c1yky8m46umv.ap-south-1.rds.amazonaws.com',         # Docker service name or MySQL server address
-        # 'PORT': '3306',       # Default MySQL port
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'demo',  # Your database name
+        'USER': 'admin',      # Your database username
+        'PASSWORD': 'rootpassword',  # Your database password
+        'HOST': 'i-0c5c72d21e4d74305 (web)',         # Docker service name or MySQL server address
+        'PORT': '3306',       # Default MySQL port
     }
 }
 
